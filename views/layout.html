@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+	<title>Food Planner</title>
+    <link rel="stylesheet" href="/stylesheets/vendor/cosmos/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/vendor/bootstrap-responsive.min.css" />
+    <link rel='stylesheet' href="/stylesheets/bootstrap-mobile-responsive.css" />
+    <link rel="stylesheet" href="/fonts/style.css" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="/javascripts/vendor/bootstrap.min.js" ></script>
+  <script src="/javascripts/vendor/angular.min.js" ></script>
+  <script src="/javascripts/app/app.js" ></script>
+</head>
+<body class="ng-cloak">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+      				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</a>
+    				<a class="brand" href="/">Food Planner</a>
+    				<div class="nav-collapse collapse">
+    					<ul class="nav">
+      						<!-- <li class="active"><a href="/">Home</a></li> -->
+      						<li><a href="/">My Plan</a></li>
+      						<li><a href="/shopping">Shopping</a></li>
+      						<li><a href="/recipes">Recipes</a></li>
+      						<li><a href="/logout">Logout</a></li>
+    					</ul>
+    				</div>
+  				</div>
+  			</div>
+  		</div>
+  
+    <div class="container" id="content">
+    
+    <div ng-controller="MessagesController">
+ 		
+ 			<div ng-repeat="message in errors" class="alert alert-error">
+  				<button type="button" class="close" ng-click="clearError(message)">&times;</button>
+  				{{"message.message"|handlebars}}
+			</div>
+ 			<div ng-repeat="message in messages" class="alert alert-success">
+  				<button type="button" class="close"  ng-click="clearMessage(message)">&times;</button>
+  				{{"message.message"|handlebars}}
+			</div>
+ 			<div ng-repeat="message in infos" class="alert alert-info">
+  				<button type="button" class="close"  ng-click="clearInfo(message)">&times;</button>
+  				{{"message.message"|handlebars}}
+			</div>
+ 			<div ng-repeat="message in warnings" class="alert">
+  				<button type="button" class="close"  ng-click="clearWarning(message)">&times;</button>
+  				{{"message.message"|handlebars}}
+			</div>
+ </div>
+    
+      {{template "content" .}}
+    </div>
+      {{template "scripts" .}}
+</body>
+</html>

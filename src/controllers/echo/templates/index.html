@@ -1,0 +1,68 @@
+{{define "content"}}
+
+
+ 
+ 
+  <div ng-controller="EchoController">
+<div class="row-fluid">
+		<div class="span6">
+				<h1>Echo</h1>
+		</div>
+		<div class="span6">
+			<div class="row-fluid">
+				<div class="span6">
+					<button class="btn btn-success fill" ng-click="post()">Save</button>
+				</div>
+				<div class="span6">
+					<button class="btn fill" ng-click="get()">Undo</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+  
+  <p></p>
+ 
+ 
+ 
+
+ 
+
+
+<div class="row-fluid">
+	<div class="span4">
+		<label>Title</label>
+	</div>
+	<div class="span8">
+	<input class="input span"  rows="3" ng-model="value.Title"></input>
+	</div>
+</div>
+<hr />
+<div class="row-fluid">
+	<div class="span4">
+		<label>Lines</label>
+	</div>
+	<div class="span8">
+		<div class="row-fluid" ng-repeat="line in value.Lines">
+				<div class="span10">
+      				<input class="input span" type="text" ng-model="line.Name"></input> 
+      			</div>
+      			<div class="span2">
+      				<a class="btn btn-danger fill" ng-click="remove(line)">Remove</a>
+      			</div>
+    	</div>
+	</div>
+</div>
+
+	
+<button class="btn btn-info" ng-click="add()">Add Line</button>
+
+</div>	
+	
+{{end}}
+
+{{define "scripts"}}
+
+<script src="/scripts/echo/scripts/echoController.js" ></script>
+
+{{end}}

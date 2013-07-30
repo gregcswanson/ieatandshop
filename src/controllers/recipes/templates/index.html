@@ -1,0 +1,94 @@
+{{define "content"}}
+
+<div class="row-fluid">
+		<div class="span6">
+				<h1>Recipes</h1>
+		</div>
+		<div class="span6">
+				 <form class="form-search">
+  					<div class="controls controls-row">
+  						<input class="span7" type="text" placeholder="search">
+    					<button type="submit" class="btn span3">Search</button>
+						<a class='btn btn-primary span2' href='/recipes/add'><span class='icon-plus'></a>
+ 					</div>
+				</form>
+		</div>
+	</div>
+	
+  <p></p>
+  
+ 
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Favorites</a>
+  </li>
+  <li><a href="#">Recent</a></li>
+  <li><a href="#">Created</a></li>
+</ul>
+	<div class="row-fluid">
+		<div class="span1">
+				<p></span><span class='icon-heart'></span></p>
+				
+		</div>
+		<div class="span2">
+				<a href='/recipes/view'><b>Name</b></a>
+		</div>
+		<div class="span3">
+				<p>Description</p>
+		</div>
+		<div class="span4">
+			<p><i>Ingredient summary,chicken, lettuce, mince...</i></p>
+			<!-- <div class="progress ">
+  				<div class="bar" style="width: 40%"></div>
+			</div> -->
+		</div>
+		<div class="btn-group span2 text-right">
+  			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    			Action
+    			<span class="caret"></span>
+  			</a>
+  			<ul class="dropdown-menu">
+    			<li><a href='#'>add to planner </a></li>
+    			<li><a href='#'>edit (if created)</a></li>
+    			<li><a href='#'>create variation</a></li>
+    			<li><a href='#'>view</a></li>
+    			<li><a href='#'>add photo</a></li>
+    			<li><a href='#'>review</a></li>
+  			</ul>
+		</div>
+	</div>
+	<hr />
+	
+	<div class="row-fluid">
+		<div class="span1">
+				<p><span class='icon-heart-2'></span></p>
+				
+		</div>
+		<div class="span4">
+				<p><b>Name</b></p>
+		</div>
+		<div class="span3">
+				<p>Description</p>
+		</div>
+		<div class="span2">
+			<div class="progress ">
+  				<div class="bar" style="width: 40%"></div>
+			</div>
+		</div>
+		<div class="btn-group span2 text-right">
+  			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    			Action
+    			<span class="caret"></span>
+  			</a>
+  			<ul class="dropdown-menu">
+    			<li><a href='#'>do something</a></li>
+  			</ul>
+		</div>
+	</div>
+	
+{{end}}
+
+{{define "scripts"}}
+
+{{end}}
