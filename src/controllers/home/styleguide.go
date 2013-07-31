@@ -9,6 +9,6 @@ import (
 
 func Styleguide(w http.ResponseWriter, r *http.Request) {
   defer infrastructure.TimeTrack(time.Now(), "controllers.styleguide")
-    _, v := views.StaticLayout("controllers/home/templates/styleguide")
+    _, v := views.StaticLayout("src/controllers/home/templates/styleguide")
   w.Write(v)
 }

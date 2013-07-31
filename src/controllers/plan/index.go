@@ -9,6 +9,6 @@ import (
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	defer infrastructure.TimeTrack(time.Now(), "PlanController.Index")
-	_, v := views.StaticLayout("controllers/plan/templates/index")
+	_, v := views.StaticLayout("src/controllers/plan/templates/index")
     w.Write(v)
 }

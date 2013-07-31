@@ -9,6 +9,6 @@ import (
 
 func View(w http.ResponseWriter, r *http.Request) {
 	defer infrastructure.TimeTrack(time.Now(), "RecipesController.View")
-	_, v := views.StaticLayout("controllers/recipes/templates/view")
+	_, v := views.StaticLayout("src/controllers/recipes/templates/view")
     w.Write(v)
 }

@@ -9,6 +9,6 @@ import (
 
 func Add(w http.ResponseWriter, r *http.Request) {
 	defer infrastructure.TimeTrack(time.Now(), "PlanController.Add")
-	_, v := views.StaticLayout("controllers/plan/templates/add")
+	_, v := views.StaticLayout("src/controllers/plan/templates/add")
     w.Write(v)
 }
