@@ -17,9 +17,6 @@ handlers:
 - url: /javascripts
   static_dir: public/javascripts
   
-- url: /scripts
-  static_dir: src/controllers
-  
 - url: /(.*\.(gif|png|jpg|ico))
   static_files: public/images/\1
   upload: images/(.*\.(gif|png|jpg|ico))
